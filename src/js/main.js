@@ -1,4 +1,1 @@
-$(document).ready(function() {
-	// js код
-
-});
+console.log('ррр')

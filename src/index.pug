@@ -1,35 +1,37 @@
 mixin scripts(scripts)
-	each src in scripts
-		- src = 'js/' + src;
-		script(src=src)
-			
+    each src in scripts
+        - src = 'js/' + src;
+        script(src=src)
+
 doctype html
 html(lang="ru")
-	head
-		meta(charset="utf-8")
-		meta(name="viewport" content="width=1180")
-		title Строительство домов из дерева
-		//css
-		link(rel="stylesheet" href="css/style.min.css")
-		//fonts
-		link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
-		// Favicon
-		link(href="images/favicon.ico" type="image/x-icon" rel="shortcut icon")
-		// animate css
-		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
-		script(src="js/wow.min.js")
-		script.
-			new WOW().init();
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=1180")
+        title Title
+        //css
+        link(rel="stylesheet" href="css/style.min.css")
+        //fonts
+        link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+        // Favicon
+        link(href="images/favicon.ico" type="image/x-icon" rel="shortcut icon")
+        // animate css
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
+        script(src="js/wow.min.js")
+        script.
+            new WOW().init();
 
-	body.body
-		//header
-		include blocks/header.pug
-		//content
-		.content
+    body.body
+        //header
+        include blocks/header.pug
+        //content
+        .container
+            .test
+                h1.text-lg-center.mt-5.text-md-center.text-sm-center.text-xl-center Привет кодер!
+                p.text-lg-center.mt-5.text-md-center.text-sm-center.text-xl-center Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
-					
-		// footer
-		include blocks/footer.pug
+        // footer
+        include blocks/footer.pug
 
-		//scripts
-		+scripts(['jquery-3.2.1.min.js', 'main.js', 'slick.min.js', 'form.js'])
+        //scripts
+        +scripts(['jquery-3.2.1.min.js', 'main.js', 'slick.min.js'])
